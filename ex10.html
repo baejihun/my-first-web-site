@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+           var coworkes = {
+            "boy":"jihun",
+            "girl":"suhui"
+           };
+           document.write("boy : " +coworkes.boy+'<br>');
+           document.write("girl : " +coworkes.girl+'<br>');
+           coworkes.puppy = 'huku';
+           document.write("puppy : " +coworkes.puppy+'<br>');
+           coworkes["data scientist"] = 'taeho';
+           document.write("data scientist : " +coworkes["data scientist"]+'<br>');
+        </script>
+        <h1>Iterate</h1>
+        <script>
+            for(var key in coworkes){
+                document.write(key+' : '+coworkes[key]+'<br>');
+            }
+        </script>
+        <h1>Property & Method</h1>
+        <script>
+            coworkes.showAll = function(){
+                for(var key in this){
+                document.write(key+' : '+this[key]+'<br>');
+                } 
+            }
+            coworkes.showAll();
+        </script>
+    </body>
+</html>
